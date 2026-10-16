@@ -34,10 +34,10 @@ pacman -S base-devel flatpak bazaar starship rustup python \
   uv hyprland noctalia noctalia-greeter wezterm nautilus \
   vim ttf-fira-code ttf-firacode-nerd ttf-jetbrains-mono \ 
   nerd-fonts go podman podman-compose protonup-qt steam \
-  gamescope gamemode easyeffects fzf net-tools less \ 
+  gamescope gamemode easyeffects fzf net-tools less hyprcursor \ 
   mangohud man-db mpv mold btop nvtop obs-studio umu-launcher \
   mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon \
-  onefetch fastfetch polkit pavucontrol zathura zathura-pdf-mupdf\
+  onefetch fastfetch polkit pavucontrol zathura zathura-pdf-mupdf \
   openrazer-daemon swappy v4l2loopback-dkms v4l2loopback-utils \
   wget curl wl-clipboard yt-dlp typst \
 
@@ -135,6 +135,20 @@ cp -r scripts/ ~/scripts/
 sleep 1
 
 clear
+
+
+echo -e "######################################"
+echo -e "######## Updating .bashrc ... ########"
+echo -e "######################################"
+
+cat <<'EOF' >> ~/.bashrc
+eval "$(starship init bash)"
+
+fastfetch
+
+# uv
+export PATH="$HOME/.local/bin:$PATH"
+EOF
 
 echo -e "######################################"
 echo -e "####### Installation complete! #######"
