@@ -95,7 +95,10 @@ sleep 1
 cp -r dotfiles/* ~/.config/
 
 # Move wezterm config to ~/
-cp ~/.config/wezterm.lua ~/
+mv ~/.config/wezterm.lua ~/
+
+# Move noctalia gui settings
+mv ~/.config/noctalia/settings.toml ~/.local/state/noctalia/settings.toml
 
 sleep 1
 
