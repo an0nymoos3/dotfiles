@@ -27,6 +27,7 @@ hl.monitor({
     mode     = "preferred",
     position = "auto",
     scale    = "1",
+    vrr      = 0,
 })
 
 
@@ -38,7 +39,9 @@ hl.monitor({
 local terminal    = "wezterm"
 local fileManager = "nautilus"
 local menu        = "hyprlauncher"
-
+local browser     = "/var/lib/flatpak/app/one.ablaze.floorp/current/active/export/bin/one.ablaze.floorp"
+local discord     = "/var/lib/flatpak/app/dev.vencord.Vesktop/current/active/export/bin/dev.vencord.Vesktop"
+local spotfiy     = "/var/lib/flatpak/app/com.spotify.Client/current/active/export/bin/com.spotify.Client"
 
 -------------------
 ---- AUTOSTART ----
@@ -56,7 +59,15 @@ local menu        = "hyprlauncher"
 -- end)
 
 hl.on("hyprland.start", function()
+  -- Noctalia shell
   hl.exec_cmd("noctalia")
+
+  -- Other programs
+  hl.exec_cmd(discord, { workspace = "1 silent" }) 
+  hl.exec_cmd(spotify, { workspace = "1 silent" }) 
+  hl.exec_cmd(terminal, { workspace = "2 silent" }) 
+  hl.exec_cmd(terminal, { workspace = "3 silent" }) 
+  hl.exec_cmd(browser, { workspace = "4 silent" }) 
 end)
 
 

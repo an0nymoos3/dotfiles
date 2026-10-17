@@ -80,7 +80,7 @@ echo -e "######################################"
 
 sleep 1
 
-paru -S neovim-nightly razergenie 
+paru -S neovim-nightly razergenie vscodium
 
 sleep 1
 

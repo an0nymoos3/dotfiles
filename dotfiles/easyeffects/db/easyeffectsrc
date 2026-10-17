@@ -1,0 +1,14 @@
+[StreamInputs]
+inputDevice=alsa_input.usb-audio-technica_AT2020USB_-00.analog-stereo
+visiblePage=pluginsPage
+
+[StreamOutputs]
+outputDevice=alsa_output.usb-Focusrite_Scarlett_Solo_USB_Y7Q14RW5407F5B-00.HiFi__Line__sink
+plugins=bass_enhancer#0
+visiblePage=pluginsPage
+visiblePlugin=bass_enhancer#0
+
+[Window]
+height=1416
+visiblePipeWirePage=testSignalsPage
+width=3416
